@@ -1,0 +1,14 @@
+{
+  "name": "BotApplication1",
+  "secretKey": "",
+  "services": [
+    {
+      "appId": "d78c8e5c-9dc1-4892-91d0-1a160276b123",
+      "id": "http://localhost:3978/api/messages",
+      "type": "endpoint",
+      "appPassword": "ndanmSABM+cjLBY37508-%)",
+      "endpoint": "http://localhost:3978/api/messages",
+      "name": "BotApplication1"
+    }
+  ]
+}
