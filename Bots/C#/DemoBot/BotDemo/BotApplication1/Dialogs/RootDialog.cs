@@ -21,10 +21,10 @@ namespace BotApplication1.Dialogs
 
             // Calculate something for us to return
             int length = (activity.Text ?? string.Empty).Length;
-
+            Console.WriteLine(activity);
             // Return our reply to the user
             await context.PostAsync($"You sent {activity.Text} which was {length} characters");
-
+            await context.PostAsync("as");
             context.Wait(MessageReceivedAsync);
         }
     }
