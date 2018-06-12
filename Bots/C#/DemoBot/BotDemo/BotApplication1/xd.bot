@@ -1,0 +1,15 @@
+{
+    "name": "xd",
+    "description": "",
+    "secretKey": "",
+    "services": [
+        {
+            "appId": "d78c8e5c-9dc1-4892-91d0-1a160276b123",
+            "id": "60b314a0-6d8f-11e8-84b4-7369b0fb2f3b",
+            "type": "endpoint",
+            "appPassword": "ndanmSABM+cjLBY37508-%)",
+            "endpoint": "http://localhost:3978/api/messages",
+            "name": "http://localhost:3978/api/messages"
+        }
+    ]
+}

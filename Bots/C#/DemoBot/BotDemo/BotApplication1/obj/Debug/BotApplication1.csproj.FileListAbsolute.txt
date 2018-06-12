@@ -115,3 +115,4 @@ C:\Users\User\Desktop\KIT-Arsevys-Code\Bots\C#\DemoBot\BotDemo\BotApplication1\o
 C:\Users\User\Desktop\KIT-Arsevys-Code\Bots\C#\DemoBot\BotDemo\BotApplication1\obj\Debug\BotApplication1.csproj.CopyComplete
 C:\Users\User\Desktop\KIT-Arsevys-Code\Bots\C#\DemoBot\BotDemo\BotApplication1\obj\Debug\BotApplication1.dll
 C:\Users\User\Desktop\KIT-Arsevys-Code\Bots\C#\DemoBot\BotDemo\BotApplication1\obj\Debug\BotApplication1.pdb
+C:\Users\User\Desktop\KIT-Arsevys-Code\Bots\C#\DemoBot\BotDemo\BotApplication1\bin\RestSharp.dll

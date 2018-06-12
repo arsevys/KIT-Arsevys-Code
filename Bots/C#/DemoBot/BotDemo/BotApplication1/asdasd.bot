@@ -1,0 +1,15 @@
+{
+    "name": "asdasd",
+    "description": "",
+    "secretKey": "",
+    "services": [
+        {
+            "appId": "d78c8e5c-9dc1-4892-91d0-1a160276b12",
+            "id": "1da6faf0-6d94-11e8-84b4-7369b0fb2f3b",
+            "type": "endpoint",
+            "appPassword": "ndanmSABM+cjLBY37508-%)",
+            "endpoint": "https://5f3f200c.ngrok.io/api/messages",
+            "name": "https://5f3f200c.ngrok.io/api/messages"
+        }
+    ]
+}
