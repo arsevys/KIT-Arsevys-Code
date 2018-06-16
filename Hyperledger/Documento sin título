@@ -1,0 +1,53 @@
+env   - imprime todos laas variables del sistema globales
+
+ sudo usermod -aG docker arsevys
+sudo systemctl status docker
+
+usermod -a -G sudo slimbook
+
+para capturar los argumentos se tiene que usar el $ y el numero 
+en los argumentos se van organizando por posicion numericamente
+sudo bash code.sh -p partes
+
+en el bash poner
+echo $1   -> "-p"
+echo $2   -> "partes"
+
+
+shift reinicia el orden de los argumentos el $2 seria $1
+export se usa para modificar o agregar variables
+ 
+
+
+
+pwd muestra la ruta donde estoy
+history muestra el historial de todos los comandos
+rm elimina archivos   y rm -R   elimina directorios
+rm -i antes de eliminar te sale una aviso si deseas eliminar
+
+rm -rf borra cualquier archivo o cualquier directivo
+osea fuerza si osi para la eliminacion
+es peligroso porque puede borrar todo el sistema operattivo
+
+touch  crea archivo
+touch -t  crea archivo especificando su fecha de creacion
+
+which  devuelve la ruta donde se encuentra un tipo
+
+
+cp directorio1 directorio2 sirve para copiar de un dire a otro
+
+cp -r dire1 dire2  sirve para copiar un directorio
+cp -i te avisa una avertencia si cunado copias te  sale
+si existe ese nombre del archivo yh no remplaza
+
+mkdir  crea carpeta
+mkdir -p  crea parpeta tmb crea carpeta dentro de ella
+
+cat  leee un archivo y lo imprime en consola
+
+
+se cierra la consola en el primer comando
+set -ev
+
+

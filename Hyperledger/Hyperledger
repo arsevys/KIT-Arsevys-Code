@@ -1,0 +1,60 @@
+//12/06/2018
+
+/*
+
+El PATH es la ubicacion de los bin para poder utilizarlo en consola
+
+*/
+
+
+
+ Revisando el basic-network de hyperledgyer-samples
+
+-que el archivo para generar los certificados etc es el crypto-config.yaml tmb que es necesario que este el otro archivo para generarlo osea el archivo configtx.yaml
+
+- en conclusion para generar los certificados es necesario el archivo configtx.yaml y el archivo crypto-config.yaml
+
+- Descubri que  cuando se genera los certificado aparte tmb deben crearse el archivo block en otra carpeta
+
+-en la carpeta crypto-config se almacenan los certificados
+ y en otra carpea se guardan las transacciones
+
+ Por ahora hay 3 archivos relevantes para crear tu propia red blockchain
+
+ 1-  crypto-config.yaml
+ 2-  configtx.yaml         ->   estos dos es necesario para los certificados
+ 3-  docker-compose.yml     ->  utiliza y referencia los certificados creados para crear tu red blockchain
+
+Genera artefactos de configuración para la red. por ejemplo, usar cryptogenpara generar los archivos MSP estáticos. Se usa configtxgenpara generar el bloque de genesis del orderer.
+
+Los nombres del servicio del asesor y del par coinciden con las variables de entorno del contenedor del orderer, del par y del cliente.
+
+Las variables de entorno se establecen para los contenedores orderer, peer y client.
+
+
+
+//14/06/2018
+
+El MSP es un componente de igual que les permite verificar las solicitudes de transacciones que llegan de 
+los clientes y firmar los resultados de las transacciones (endosos). La política de escritura se define en el momento
+ de creación del canal y determina qué usuario tiene derecho a enviar una transacción a ese canal
+
+
+
+Cuando un cliente realiza una transacioon utiliza un sdk disponible en hyperledger 
+este sdk sirve para empaquetar la propuesta de la transaccion en el formato
+arquitectonico adecuado (bufer de protocolo sobro gRPC) y toma las credenciales criptograficas del usuario
+y estas se envian alos PEERS
+los peers se encargan de :
+-la prouesta de transaccion este bien formada
+- no se haya enviando ya en el pasado
+-la firma es valida utilizando (MSP)
+- que el cliente este debbidamente autorisado para realisar la propuesta de ese canal
+
+es decir cada peer asegura que se cumplen con todas las politicas
+los peer toman la entrada de la propuesta o transaccion y lo pasa como argumento en la funcion del
+chaincode 
+El chaincode se encarga de devolverle una repuesta
+
+
+
