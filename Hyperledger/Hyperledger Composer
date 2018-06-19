@@ -1,0 +1,47 @@
+Composer
+16/06/2018
+-sirve para crear tu red ms rapido
+- estan compuesto por varios archivos
+
+
+Errores al instalar -Error Comun  :
+
+gyp WARN EACCES attempting to reinstall using temporary dev dir "/usr/local/lib/node_modules/composer-rest-server/node_modules/dtrace-provider/.node-gyp"
+
+
+es neceario usar el --unsafe-perm por cada instalacion
+
+sudo npm install -g composer-rest-server --unsafe-perm
+
+
+19/06/2018
+ah tmb sobre el error de gyp WARN , solucione el error actualisando el apt y descargando python 2.7
+refresca los repositorios
+sudo apt update
+sudo apt upgrade
+sudo apt install python2.7 python-pip
+
+
+
+crear un comtenedor docker teniendo ahi la web playground de composer 
+ docker run --name composer-playground --publish 8080:8080 hyperledger/composer-playground
+
+ -basicamente el Hyperledger composer es un framework que crea un interfaz web(Usando Yeoman) y genera api
+ para que entren al Hyperledger Fabric 
+
+
+comprimir a BNA en el proyecto composer 
+Ahora que se ha definido la red comercial, se debe empaquetar en un archivo de archivo de red empresarial desplegable ( .bna).
+
+Usando la línea de comando, navega hacia tutorial-network directorio.
+
+Desde el tutorial-networkdirectorio, ejecute el siguiente comando:
+
+
+/*comando para generar el bna de nuestro proyecto composer*/
+composer archive create -t dir -n 
+
+
+
+
+
