@@ -1,0 +1,3 @@
+ps -efa    -> mustrar los procesos del sistema
+
+ctrl +pq  sale de la terminal del bash pero no mata el proceso en un contenedor docker
