@@ -1,0 +1,48 @@
+Una imagen según Docker es una plantilla de solo lectura vacía o con un aplicación pre-instalada para la creación de contenedores, estas pueden ser creadas por nosotros o terceros. Se pueden guardar en un registro interno o público, puedes encontrar imágenes en hub.docker.com
+
+Para descargar imágenes de un repositorio externo, se utiliza en comando docker pull
+
+Cuando se ejecuta un contenedor con el comando docker run las imágenes son descargadas automáticamente.
+
+Para descargar imágenes de un repositorio externo, se utiliza en comando docker pull
+
+Cuando se ejecuta un contenedor con el comando docker run las imágenes son descargadas automáticamente.
+
+Algunos comandos útiles para el manejo de imágenes y contenedores en Docker son los siguientes:
+
+docker images Lista las imágenes locales.
+docker pull [nombre de la imagen] Descarga una imagen de Docker.
+docker pull [nombre de la imagen]:[tag] Descarga una imagen de Docker con un tag en especifico.
+docker ps Lista los contenedores que se encuentran en ejecución.
+docker ps -a Lista todos los contenedores que estén o no en ejecución.
+docker ps -a -q Lista y muestra sólo los ID de todos los contenedores que estén o no en ejecución.
+docker ps -a --no-trunc Muestra el formato extendido del ID de los contenedores.
+docker ps --filter="[tipo de filtrado]" Filtra los contenedores en función del código de salida, del estado…
+docker ps --help Muestra un menú de ayuda.
+docker attach [ID/nombre del contenedor] Permite ingresar nuevamente a un contenedor creado anteriormente.
+docker run --name [nombre del contenedor] [imagen] Permite iniciar un contenedor con un nombre.
+docker rm [ID/nombre del contenedor] Permite eliminar un contenedor.
+docker rm [ID/nombre...] [ID/nombre...] [ID/nombre...] Permite eliminar más de un contenedor.
+docker logs [ID/nombre del contenedor] Muestra los logs de un contenedor.
+docker logs -f [ID/nombre del contenedor] Muestra los logs en tiempo real de un contenedor.
+docker exec [opciones] [ID/nombre del contenedor] [comando] Permite ejecutar nuevas acciones en un contenedor.
+docker start -a [ID/nombre del contenedor] Iniciar nuevamente un contenedor.
+docker pause [ID/nombre del contenedor] Permite pausar un contenedor en ejecución.
+docker unpause [ID/nombre del contenedor] Permite reanudar un contenedor pausado.
+docker stop [ID/nombre del contenedor] Permite detener un contenedor en ejecución.
+docker kill [ID/nombre del contenedor] Permite matar (detener forzosamente) un contenedor en ejecución.
+docker inspect Muestra información útil de un contenedor.
+Con el comando docker run [opciones] [imagen] [comando] [args] se creará un contenedor a partir de una imagen. Si Docker no consigue la imagen en el área local la descargará.
+
+Por medio de las opciones que se les pasa a los contenedores, estos pueden ser interactivos. Algunas muy importantes de conocer son:
+
+-i Le indica a Docker que se utilizará el STDIN del contenedor.
+-t Le indica a Docker que se requiere una pseudo-terminal en el contenedor.
+-d Le indica a Docker que el contenedor correrá en el background.
+-P Expone los puertos utilizados por un contenedor.
+Con las combinaciones de teclas CNTRL + PQ el servicio de Docker quedará corriendo en el background.
+Existen tres formas de crear imágenes:
+
+Hacer commit de los contenidos de un contenedor: docker commit [ID/nombre...] [nombre para la imagen]:[tag]
+Construir una imagen basada en un Dockerfile.
+Importar un archivo Tar a Docker con el contenido de un imagen.
