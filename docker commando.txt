@@ -10,7 +10,7 @@ Cuando se ejecuta un contenedor con el comando docker run las imágenes son desca
 
 Algunos comandos útiles para el manejo de imágenes y contenedores en Docker son los siguientes:
 
-docker images Lista las imágenes locales.
+docker images Lista las imágenes locales. 
 docker pull [nombre de la imagen] Descarga una imagen de Docker.v
 docker pull [nombre de la imagen]:[tag] Descarga una imagen de Docker con un tag en especifico.
 docker ps Lista los contenedores que se encuentran en ejecución.
