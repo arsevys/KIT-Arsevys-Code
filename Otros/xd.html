@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<textarea id="xd"></textarea>
+	<input type="button" value="generar" onclick="go()" name="">
+
+	<div id="resul"></div>
+
+
+	<script type="text/javascript">
+
+		function go(){
+        		var t=document.getElementById("xd").value;
+         var id=document.getElementById("resul");
+
+
+
+		let y=t.split(",");
+		console.log(y);
+
+		for (var i =0 ; y.length > i; i++) {
+			let o=y[i].split("]");
+			console.log(o);
+            let l=o[0].substring(o[0].indexOf("[")+1,o[0].length);
+            let k=o[1].substring(o[1].indexOf("[")+1,o[1].length);
+
+           if(k =="int" ){
+             id.innerHTML+=`public int ${l} { set; get; } <br>`;
+           }
+             else if( k == "numeric"){
+             id.innerHTML+=`public double ${l} { set; get; } <br>`;
+           }else {
+      id.innerHTML+=`public string ${l} { set; get; } <br>`;
+
+           }
+			
+
+
+		}
+
+
+		}
+
+
+	</script>
+</body>
+</html>

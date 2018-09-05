@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<textarea id="xd"></textarea>
+	<input type="button" value="generar" onclick="go()" name="">
+
+	<div id="resul"></div>
+
+
+	<script type="text/javascript">
+
+		function go(){
+			var letra="p";
+			var dReader="s";
+        		var t=document.getElementById("xd").value;
+         var id=document.getElementById("resul");
+
+       var result=[];
+
+		let y=t.split("public");
+		console.log(y);
+
+		for(let i=0;y.length>i;i++){
+			if(y[i].match("string")){
+				let a=y[i].substring(y[i].indexOf("g")+1,y[i].indexOf("{"));
+				result.push({tipo:"string",data:a.trim()})
+			}
+			if(y[i].match("int")){
+				let a=y[i].substring(y[i].indexOf("t")+1,y[i].indexOf("{"));
+				result.push({tipo:"int",data:a.trim()})
+			}
+			if(y[i].match("DateTime")){
+				let a=y[i].substring(y[i].indexOf("e")+1,y[i].indexOf("{"));
+				result.push({tipo:"datetime",data:a.trim()})
+			}
+		}
+		console.log(result);
+		
+		for (var i =0 ; result.length > i; i++) {
+		
+
+           if(result[i].tipo =="int" ){
+             id.innerHTML+=`${letra}.${result[i].data}=${dReader}.GetInt32(${i}); <br>`;
+           }
+             else if( result[i].tipo == "string"){
+            id.innerHTML+=`${letra}.${result[i].data}=${dReader}[${i}].ToString(); <br>`;
+           }
+      //       else if( k == "date"){
+      //        id.innerHTML+=`public DateTime ${l} { set; get; } <br>`;
+      //      }else {
+      // id.innerHTML+=`public string ${l} { set; get; } <br>`;
+
+      //      }
+			
+
+
+		}
+
+
+		}
+
+
+	</script>
+</body>
+</html>

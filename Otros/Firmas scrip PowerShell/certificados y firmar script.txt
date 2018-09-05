@@ -1,0 +1,27 @@
+utilizar el makecert 
+
+si es posible descarganse el makecert.exe y lo ponen como variables de entorno 
+http://www.inventec.ch/chdh/notes/makecert_5_131_3790_0.zip
+
+ahora prueben en su cmd o powershell si reconoce el comando makecert
+si funciono sigamos
+abrir su cmd o powershell con administrador importante
+
+makecert -n "CN=PowerShell Local Certificate Root" -a sha1 -eku 1.3.6.1.5.5.7.3.3 -r -sv root.pvk root.cer -ss Root -sr localMachine
+
+makecert -pe -n "CN=PowerShell User" -ss MY -a sha1 -eku 1.3.6.1.5.5.7.3.3 -iv root.pvk -ic root.cer
+
+$cert = @(Get-ChildItem cert:\CurrentUser\My -CodeSigning)[0]
+
+/*aqui es para firmar el script en shell*/
+Set-AuthenticodeSignature -FilePath "deploy.ps1" -Certificate $cert
+
+
+
+
+Por ultimo si deseaas desabilitar para que no te pida una firma al ejecutar un script xd
+ejecuta esto :
+http://bytesentreteclas.com/habilitar-ejecucion-de-scripts-powershell-en-windows-10/
+ Set-ExecutionPolicy Unrestricted
+
+https://stackoverflow.com/questions/10937065/signtool-allows-me-to-sign-code-but-set-authenticodesignature-says-the-certific

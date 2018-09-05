@@ -1,0 +1,106 @@
+* {
+	margin:0;
+	padding: 0;
+}
+
+
+
+body {
+	background-image: url("bg.png");
+}
+
+.container {
+	width: 43%;
+	height: 480px;
+  margin: 50px auto;
+  padding: 5px;
+  border-radius: 5px;
+  /*background-color: rgba(129,60,129,0.5);*/
+}
+
+h2 {
+	text-align: center;
+ color:white;
+
+}
+.rink {
+  display: none;
+}
+.imgVoto {
+	text-align: center;
+}
+
+.iptKey {
+	display: inline-block;
+    background: #F9F9F9;
+    width: 90%;
+    margin: 15px auto;
+    border: 0;
+    border-bottom: 1px solid lightgrey;
+    padding: 12px 5px;
+    outline: 0;
+    font-size: 15px;
+}
+#enviar,#votar{
+	    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16);
+    background: #14FFB2;
+    height: 56px;
+    width: 120px;
+    padding: 0;
+    margin: auto;
+    border: none;
+    border-radius: 28px;
+    outline: none;
+    overflow: hidden;
+ 
+    bottom: -20px;
+
+    color: black;
+    font: 500 20px Roboto;
+    cursor: pointer;
+    transition: .3s .7s, background .1s .3s;
+}
+
+.segundo {
+ display: none;
+}
+.votante {
+	display: inline-block;
+}
+
+label {
+	font-size: 12px;
+	padding: 4px;
+	background-color: orange;
+}
+input[type="checkbox"]{
+  width: 30px; /*Desired width*/
+  height: 30px; /*Desired height*/
+  cursor: pointer;
+
+ 
+}
+.segundo img {
+  border-radius: 15px;
+}
+img {
+	margin: 8px;
+}
+.b{
+
+	width: 17%;
+	padding: 5px;
+	border-radius: 10px;
+}
+.meta{
+  display: none;
+}
+
+.efecto {
+  font-family: courier, "courier new", monospace;
+font-size: 23px;
+letter-spacing: -2.4pt;
+word-spacing: 5.4pt;
+line-height: 0.9;
+color: white;
+}

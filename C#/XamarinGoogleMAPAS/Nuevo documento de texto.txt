@@ -1,0 +1,4 @@
+keytool.exe -list -v -keystore "C:\Users\user\AppData\Local\Xamarin\Mono for Android\debug.keystore" -alias androiddebugkey -storepass android -keypass android
+
+
+ese comando ejecutar en la carpeta bin de tu jdk de java  . el keytool.exe se encuentra ahi

@@ -1,0 +1,13 @@
+{
+	"name":"ChatWebsocket",
+	"description":"Este es una plataforma para chatear de manera rapida.",
+	"keywords":[
+	"rapido",
+	"HTML5",
+	"Websocket",
+	"chat"	
+	],
+	"website":"https://ws-chat-javier.herokuapp.com",
+	"repository":"https://git.heroku.com/ws-chat-javier.git",
+	"logo":""
+}
