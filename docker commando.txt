@@ -9,7 +9,7 @@ Para descargar imágenes de un repositorio externo, se utiliza en comando docker 
 Cuando se ejecuta u n contenedor con el comando docker run las imágenes son descargadas automáticamente.
 
 Algunos comandos útiles para el manejo de imágenes y contenedores en Docker son los siguientes:
-
+---
 docker images Lista las imágenes locales. 
 docker pull [nombre de la imagen] Descarga una imagen de Docker.v
 docker pull [nombre de la imagen]:[tag] Descarga una imagen de Docker con un tag en especifico.
