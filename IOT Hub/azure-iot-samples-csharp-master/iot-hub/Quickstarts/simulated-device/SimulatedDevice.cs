@@ -14,12 +14,13 @@ namespace simulated_device
 {
     class SimulatedDevice
     {
+
         private static DeviceClient s_deviceClient;
 
         // The device connection string to authenticate the device with your IoT hub.
         // Using the Azure CLI:
         // az iot hub device-identity show-connection-string --hub-name {YourIoTHubName} --device-id MyDotnetDevice --output table
-        private readonly static string s_connectionString = "HostName=mydriving-egbjpayt6bajg.azure-devices.net;DeviceId=test;SharedAccessKey=dNdYXJKvYSLMFbHTirnFTl9hT8XGgnpiW8ru3YkOHDA=";
+        private readonly static string s_connectionString = "HostName=digitalCar.azure-devices.net;DeviceId=prueba;SharedAccessKey=nPh5ND6bMSw20CQwb3PfnCfL4hVP+2dcC6/KLrlGqU0=";
 
 
         // Async method to send simulated telemetry
@@ -62,7 +63,7 @@ namespace simulated_device
                         IsSimulated= 1,
                         TripPointId= "5a776f84-7bd5-4761-9bb2-614fcc2aa37d"
                       };
-
+/*
                    var io=new {
                         MessageId= "",
                         CorrelationId="",
@@ -70,8 +71,8 @@ namespace simulated_device
                         ConnectionDeviceGenerationId= "636683185044744993",
                         EnqueuedTime= "2018-07-27T22:01:11.5470000Z",
                         StreamId= ""
-                      }   ;
-                var telemetryDataPoint = new 
+                      }   ;*/
+             /*   var telemetryDataPoint = new 
                 {
                       TripId= "f9d72f22-654c-44d8-aa71-102d8ab94bfd",
                       UserId= "1",
@@ -80,8 +81,8 @@ namespace simulated_device
                       PartitionId= 0,
                       EventEnqueuedUtcTime= "2018-07-27T22:01:11.5410000Z",
                     //  IoTHub=JsonConvert.SerializeObject(io)
-                    };
-                var messageString = JsonConvert.SerializeObject(telemetryDataPoint);
+                    };*/
+                var messageString = JsonConvert.SerializeObject(f);
                 var message = new Message(Encoding.ASCII.GetBytes(messageString));
 
                 // Add a custom application property to the message.
